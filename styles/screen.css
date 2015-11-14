@@ -1,0 +1,936 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Powered by Ivanov Evgen 
+ * http://ivanov-test.vv.si  
+ */
+/* line 5, ../../../../CompassApp/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../CompassApp/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../CompassApp/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../CompassApp/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../CompassApp/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../CompassApp/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../CompassApp/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../CompassApp/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../CompassApp/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../sass/_grid.sass */
+.grid {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 14, ../sass/_grid.sass */
+.grid:before,
+.grid:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+
+/* line 20, ../sass/_grid.sass */
+.grid:after {
+  clear: both;
+}
+
+/* line 23, ../sass/_grid.sass */
+.grid > * {
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+  margin: 0;
+  float: left;
+}
+
+/* line 30, ../sass/_grid.sass */
+.grid > * > :last-child {
+  margin-bottom: 0;
+}
+
+/* Grid gutter
+ * ========================================================================== */
+/* line 35, ../sass/_grid.sass */
+.grid {
+  margin-left: -30px;
+}
+
+/* line 38, ../sass/_grid.sass */
+.grid > * {
+  padding-left: 30px;
+}
+
+/* Vertical */
+/* line 42, ../sass/_grid.sass */
+.grid + .grid,
+.grid > * {
+  margin-top: 30px;
+}
+
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  /* line 48, ../sass/_grid.sass */
+  .grid {
+    margin-left: -35px;
+  }
+
+  /* line 51, ../sass/_grid.sass */
+  .grid > * {
+    padding-left: 35px;
+  }
+
+  /* line 54, ../sass/_grid.sass */
+  .grid + .grid,
+  .grid > * > {
+    margin-top: 35px;
+  }
+}
+/* Collapse gutter
+ */
+/* line 62, ../sass/_grid.sass */
+.grid-collapse {
+  margin-left: 0;
+}
+
+/* line 65, ../sass/_grid.sass */
+.grid-collapse > * {
+  padding-left: 0;
+}
+
+/* line 68, ../sass/_grid.sass */
+.grid-collapse + .grid-collapse,
+.grid-collapse > * {
+  margin-top: 0;
+}
+
+/* Small gutter
+ */
+/* line 75, ../sass/_grid.sass */
+.grid-small {
+  margin-left: -10px;
+}
+
+/* line 78, ../sass/_grid.sass */
+.grid-small > * {
+  padding-left: 10px;
+}
+
+/* line 81, ../sass/_grid.sass */
+.grid-small + .grid-small,
+.grid-small > * {
+  margin-top: 10px;
+}
+
+/* Medium gutter
+ */
+/* line 88, ../sass/_grid.sass */
+.grid-medium {
+  margin-left: -25px;
+}
+
+/* line 91, ../sass/_grid.sass */
+.grid-medium > * {
+  padding-left: 25px;
+}
+
+/* line 94, ../sass/_grid.sass */
+.grid-medium + .grid-medium,
+.grid-medium > * {
+  margin-top: 25px;
+}
+
+/* Modifier: `grid-divider`
+ * ========================================================================== */
+/* line 100, ../sass/_grid.sass */
+.grid-divider:not(:empty) {
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+/* line 104, ../sass/_grid.sass */
+.grid-divider > * {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* line 108, ../sass/_grid.sass */
+.grid-divider > [class*='width-1-']:not(.width-1-1):nth-child(n+2),
+.grid-divider > [class*='width-2-']:nth-child(n+2),
+.grid-divider > [class*='width-3-']:nth-child(n+2),
+.grid-divider > [class*='width-4-']:nth-child(n+2),
+.grid-divider > [class*='width-5-']:nth-child(n+2),
+.grid-divider > [class*='width-6-']:nth-child(n+2),
+.grid-divider > [class*='width-7-']:nth-child(n+2),
+.grid-divider > [class*='width-8-']:nth-child(n+2),
+.grid-divider > [class*='width-9-']:nth-child(n+2),
+.grid-divider > :nth-child(n+2) {
+  border-left: 1px solid #dddddd;
+}
+
+/* line 120, ../sass/_grid.sass */
+.grid-divider.grid-width-1-2 > :nth-child(2n+3),
+.grid-divider.grid-width-1-3 > :nth-child(3n+4),
+.grid-divider.grid-width-1-4 > :nth-child(4n+5),
+.grid-divider.grid-width-1-5 > :nth-child(5n+6),
+.grid-divider.grid-width-1-6 > :nth-child(6n+7),
+.grid-divider.grid-width-1-7 > :nth-child(7n+8),
+.grid-divider.grid-width-1-8 > :nth-child(8n+9),
+.grid-divider.grid-width-1-9 > :nth-child(9n+10) {
+  border-left: none;
+}
+
+/* Tablet and bigger */
+@media (min-width: 768px) {
+  /* line 132, ../sass/_grid.sass */
+  .grid-divider > [class*='width-medium-']:not(.width-medium-1-1):nth-child(n+2) {
+    border-left: 1px solid #dddddd;
+  }
+}
+/* Desktop and bigger */
+@media (min-width: 960px) {
+  /* line 138, ../sass/_grid.sass */
+  .grid-divider > [class*='width-large-']:not(.width-large-1-1):nth-child(n+2) {
+    border-left: 1px solid #dddddd;
+  }
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  /* line 144, ../sass/_grid.sass */
+  .grid-divider:not(:empty) {
+    margin-left: -35px;
+    margin-right: -35px;
+  }
+
+  /* line 148, ../sass/_grid.sass */
+  .grid-divider > * {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  /* line 152, ../sass/_grid.sass */
+  .grid-divider:empty {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+}
+/* Vertical divider
+ */
+/* line 160, ../sass/_grid.sass */
+.grid-divider:empty {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-top: 1px solid #dddddd;
+}
+
+/* Match panels in grids
+ * ========================================================================== */
+/* line 167, ../sass/_grid.sass */
+.grid-match > * {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* line 175, ../sass/_grid.sass */
+.grid-match > * > * {
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* line 3, ../sass/_wide.sass */
+[class*='uk-width'] {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Widths
+ */
+/* Whole */
+/* line 11, ../sass/_wide.sass */
+.uk-width-1-1 {
+  width: 100%;
+}
+
+/* Halves */
+/* line 15, ../sass/_wide.sass */
+.uk-width-1-2,
+.uk-width-2-4,
+.uk-width-3-6,
+.uk-width-5-10 {
+  width: 50%;
+}
+
+/* Thirds */
+/* line 22, ../sass/_wide.sass */
+.uk-width-1-3,
+.uk-width-2-6 {
+  width: 33.333%;
+}
+
+/* line 26, ../sass/_wide.sass */
+.uk-width-2-3,
+.uk-width-4-6 {
+  width: 66.666%;
+}
+
+/* Quarters */
+/* line 31, ../sass/_wide.sass */
+.uk-width-1-4 {
+  width: 25%;
+}
+
+/* line 34, ../sass/_wide.sass */
+.uk-width-3-4 {
+  width: 75%;
+}
+
+/* Fifths */
+/* line 38, ../sass/_wide.sass */
+.uk-width-1-5,
+.uk-width-2-10 {
+  width: 20%;
+}
+
+/* line 42, ../sass/_wide.sass */
+.uk-width-2-5,
+.uk-width-4-10 {
+  width: 40%;
+}
+
+/* line 46, ../sass/_wide.sass */
+.uk-width-3-5,
+.uk-width-6-10 {
+  width: 60%;
+}
+
+/* line 50, ../sass/_wide.sass */
+.uk-width-4-5,
+.uk-width-8-10 {
+  width: 80%;
+}
+
+/* Sixths */
+/* line 55, ../sass/_wide.sass */
+.uk-width-1-6 {
+  width: 16.666%;
+}
+
+/* line 58, ../sass/_wide.sass */
+.uk-width-5-6 {
+  width: 83.333%;
+}
+
+/* Tenths */
+/* line 62, ../sass/_wide.sass */
+.uk-width-1-10 {
+  width: 10%;
+}
+
+/* line 65, ../sass/_wide.sass */
+.uk-width-3-10 {
+  width: 30%;
+}
+
+/* line 68, ../sass/_wide.sass */
+.uk-width-7-10 {
+  width: 70%;
+}
+
+/* line 71, ../sass/_wide.sass */
+.uk-width-9-10 {
+  width: 90%;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 480px) {
+  /* Whole */
+  /* line 77, ../sass/_wide.sass */
+  .uk-width-small-1-1 {
+    width: 100%;
+  }
+
+  /* Halves */
+  /* line 81, ../sass/_wide.sass */
+  .uk-width-small-1-2,
+  .uk-width-small-2-4,
+  .uk-width-small-3-6,
+  .uk-width-small-5-10 {
+    width: 50%;
+  }
+
+  /* Thirds */
+  /* line 88, ../sass/_wide.sass */
+  .uk-width-small-1-3,
+  .uk-width-small-2-6 {
+    width: 33.333%;
+  }
+
+  /* line 92, ../sass/_wide.sass */
+  .uk-width-small-2-3,
+  .uk-width-small-4-6 {
+    width: 66.666%;
+  }
+
+  /* Quarters */
+  /* line 97, ../sass/_wide.sass */
+  .uk-width-small-1-4 {
+    width: 25%;
+  }
+
+  /* line 100, ../sass/_wide.sass */
+  .uk-width-small-3-4 {
+    width: 75%;
+  }
+
+  /* Fifths */
+  /* line 104, ../sass/_wide.sass */
+  .uk-width-small-1-5,
+  .uk-width-small-2-10 {
+    width: 20%;
+  }
+
+  /* line 108, ../sass/_wide.sass */
+  .uk-width-small-2-5,
+  .uk-width-small-4-10 {
+    width: 40%;
+  }
+
+  /* line 112, ../sass/_wide.sass */
+  .uk-width-small-3-5,
+  .uk-width-small-6-10 {
+    width: 60%;
+  }
+
+  /* line 116, ../sass/_wide.sass */
+  .uk-width-small-4-5,
+  .uk-width-small-8-10 {
+    width: 80%;
+  }
+
+  /* Sixths */
+  /* line 121, ../sass/_wide.sass */
+  .uk-width-small-1-6 {
+    width: 16.666%;
+  }
+
+  /* line 124, ../sass/_wide.sass */
+  .uk-width-small-5-6 {
+    width: 83.333%;
+  }
+
+  /* Tenths */
+  /* line 128, ../sass/_wide.sass */
+  .uk-width-small-1-10 {
+    width: 10%;
+  }
+
+  /* line 131, ../sass/_wide.sass */
+  .uk-width-small-3-10 {
+    width: 30%;
+  }
+
+  /* line 134, ../sass/_wide.sass */
+  .uk-width-small-7-10 {
+    width: 70%;
+  }
+
+  /* line 137, ../sass/_wide.sass */
+  .uk-width-small-9-10 {
+    width: 90%;
+  }
+}
+/* Tablet and bigger */
+@media (min-width: 768px) {
+  /* Whole */
+  /* line 144, ../sass/_wide.sass */
+  .uk-width-medium-1-1 {
+    width: 100%;
+  }
+
+  /* Halves */
+  /* line 148, ../sass/_wide.sass */
+  .uk-width-medium-1-2,
+  .uk-width-medium-2-4,
+  .uk-width-medium-3-6,
+  .uk-width-medium-5-10 {
+    width: 50%;
+  }
+
+  /* Thirds */
+  /* line 155, ../sass/_wide.sass */
+  .uk-width-medium-1-3,
+  .uk-width-medium-2-6 {
+    width: 33.333%;
+  }
+
+  /* line 159, ../sass/_wide.sass */
+  .uk-width-medium-2-3,
+  .uk-width-medium-4-6 {
+    width: 66.666%;
+  }
+
+  /* Quarters */
+  /* line 164, ../sass/_wide.sass */
+  .uk-width-medium-1-4 {
+    width: 25%;
+  }
+
+  /* line 167, ../sass/_wide.sass */
+  .uk-width-medium-3-4 {
+    width: 75%;
+  }
+
+  /* Fifths */
+  /* line 171, ../sass/_wide.sass */
+  .uk-width-medium-1-5,
+  .uk-width-medium-2-10 {
+    width: 20%;
+  }
+
+  /* line 175, ../sass/_wide.sass */
+  .uk-width-medium-2-5,
+  .uk-width-medium-4-10 {
+    width: 40%;
+  }
+
+  /* line 179, ../sass/_wide.sass */
+  .uk-width-medium-3-5,
+  .uk-width-medium-6-10 {
+    width: 60%;
+  }
+
+  /* line 183, ../sass/_wide.sass */
+  .uk-width-medium-4-5,
+  .uk-width-medium-8-10 {
+    width: 80%;
+  }
+
+  /* Sixths */
+  /* line 188, ../sass/_wide.sass */
+  .uk-width-medium-1-6 {
+    width: 16.666%;
+  }
+
+  /* line 191, ../sass/_wide.sass */
+  .uk-width-medium-5-6 {
+    width: 83.333%;
+  }
+
+  /* Tenths */
+  /* line 195, ../sass/_wide.sass */
+  .uk-width-medium-1-10 {
+    width: 10%;
+  }
+
+  /* line 198, ../sass/_wide.sass */
+  .uk-width-medium-3-10 {
+    width: 30%;
+  }
+
+  /* line 201, ../sass/_wide.sass */
+  .uk-width-medium-7-10 {
+    width: 70%;
+  }
+
+  /* line 204, ../sass/_wide.sass */
+  .uk-width-medium-9-10 {
+    width: 90%;
+  }
+}
+/* Desktop and bigger */
+@media (min-width: 960px) {
+  /* Whole */
+  /* line 211, ../sass/_wide.sass */
+  .uk-width-large-1-1 {
+    width: 100%;
+  }
+
+  /* Halves */
+  /* line 215, ../sass/_wide.sass */
+  .uk-width-large-1-2,
+  .uk-width-large-2-4,
+  .uk-width-large-3-6,
+  .uk-width-large-5-10 {
+    width: 50%;
+  }
+
+  /* Thirds */
+  /* line 222, ../sass/_wide.sass */
+  .uk-width-large-1-3,
+  .uk-width-large-2-6 {
+    width: 33.333%;
+  }
+
+  /* line 226, ../sass/_wide.sass */
+  .uk-width-large-2-3,
+  .uk-width-large-4-6 {
+    width: 66.666%;
+  }
+
+  /* Quarters */
+  /* line 231, ../sass/_wide.sass */
+  .uk-width-large-1-4 {
+    width: 25%;
+  }
+
+  /* line 234, ../sass/_wide.sass */
+  .uk-width-large-3-4 {
+    width: 75%;
+  }
+
+  /* Fifths */
+  /* line 238, ../sass/_wide.sass */
+  .uk-width-large-1-5,
+  .uk-width-large-2-10 {
+    width: 20%;
+  }
+
+  /* line 242, ../sass/_wide.sass */
+  .uk-width-large-2-5,
+  .uk-width-large-4-10 {
+    width: 40%;
+  }
+
+  /* line 246, ../sass/_wide.sass */
+  .uk-width-large-3-5,
+  .uk-width-large-6-10 {
+    width: 60%;
+  }
+
+  /* line 250, ../sass/_wide.sass */
+  .uk-width-large-4-5,
+  .uk-width-large-8-10 {
+    width: 80%;
+  }
+
+  /* Sixths */
+  /* line 255, ../sass/_wide.sass */
+  .uk-width-large-1-6 {
+    width: 16.666%;
+  }
+
+  /* line 258, ../sass/_wide.sass */
+  .uk-width-large-5-6 {
+    width: 83.333%;
+  }
+
+  /* Tenths */
+  /* line 262, ../sass/_wide.sass */
+  .uk-width-large-1-10 {
+    width: 10%;
+  }
+
+  /* line 265, ../sass/_wide.sass */
+  .uk-width-large-3-10 {
+    width: 30%;
+  }
+
+  /* line 268, ../sass/_wide.sass */
+  .uk-width-large-7-10 {
+    width: 70%;
+  }
+
+  /* line 271, ../sass/_wide.sass */
+  .uk-width-large-9-10 {
+    width: 90%;
+  }
+}
+/* line 4, ../sass/_grid-wide.sass */
+[class*='grid-width'] > * {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* line 8, ../sass/_grid-wide.sass */
+.grid-width-1-2 > * {
+  width: 50%;
+}
+
+/* line 11, ../sass/_grid-wide.sass */
+.grid-width-1-3 > * {
+  width: 33.333%;
+}
+
+/* line 14, ../sass/_grid-wide.sass */
+.grid-width-1-4 > * {
+  width: 25%;
+}
+
+/* line 17, ../sass/_grid-wide.sass */
+.grid-width-1-5 > * {
+  width: 20%;
+}
+
+/* line 20, ../sass/_grid-wide.sass */
+.grid-width-1-6 > * {
+  width: 16.666%;
+}
+
+/* line 23, ../sass/_grid-wide.sass */
+.grid-width-1-10 > * {
+  width: 10%;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 480px) {
+  /* line 28, ../sass/_grid-wide.sass */
+  .grid-width-small-1-2 > * {
+    width: 50%;
+  }
+
+  /* line 31, ../sass/_grid-wide.sass */
+  .grid-width-small-1-3 > * {
+    width: 33.333%;
+  }
+
+  /* line 34, ../sass/_grid-wide.sass */
+  .grid-width-small-1-4 > * {
+    width: 25%;
+  }
+
+  /* line 37, ../sass/_grid-wide.sass */
+  .grid-width-small-1-5 > * {
+    width: 20%;
+  }
+
+  /* line 40, ../sass/_grid-wide.sass */
+  .grid-width-small-1-6 > * {
+    width: 16.666%;
+  }
+
+  /* line 43, ../sass/_grid-wide.sass */
+  .grid-width-small-1-10 > * {
+    width: 10%;
+  }
+}
+/* Tablet and bigger */
+@media (min-width: 768px) {
+  /* line 49, ../sass/_grid-wide.sass */
+  .grid-width-medium-1-2 > * {
+    width: 50%;
+  }
+
+  /* line 52, ../sass/_grid-wide.sass */
+  .grid-width-medium-1-3 > * {
+    width: 33.333%;
+  }
+
+  /* line 55, ../sass/_grid-wide.sass */
+  .grid-width-medium-1-4 > * {
+    width: 25%;
+    width: 20%;
+  }
+
+  /* line 61, ../sass/_grid-wide.sass */
+  .grid-width-medium-1-6 > * {
+    width: 16.666%;
+  }
+
+  /* line 64, ../sass/_grid-wide.sass */
+  .grid-width-medium-1-10 > * {
+    width: 10%;
+  }
+}
+/* Desktop and bigger */
+@media (min-width: 960px) {
+  /* line 70, ../sass/_grid-wide.sass */
+  .grid-width-large-1-2 > * {
+    width: 50%;
+  }
+
+  /* line 73, ../sass/_grid-wide.sass */
+  .grid-width-large-1-3 > * {
+    width: 33.333%;
+  }
+
+  /* line 76, ../sass/_grid-wide.sass */
+  .grid-width-large-1-4 > * {
+    width: 25%;
+  }
+
+  /* line 79, ../sass/_grid-wide.sass */
+  .grid-width-large-1-5 > * {
+    width: 20%;
+  }
+
+  /* line 82, ../sass/_grid-wide.sass */
+  .grid-width-large-1-6 > * {
+    width: 16.666%;
+  }
+
+  /* line 85, ../sass/_grid-wide.sass */
+  .grid-width-large-1-10 > * {
+    width: 10%;
+  }
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  /* line 91, ../sass/_grid-wide.sass */
+  .grid-width-xlarge-1-2 > * {
+    width: 50%;
+  }
+
+  /* line 94, ../sass/_grid-wide.sass */
+  .grid-width-xlarge-1-3 > * {
+    width: 33.333%;
+  }
+
+  /* line 97, ../sass/_grid-wide.sass */
+  .grid-width-xlarge-1-4 > * {
+    width: 25%;
+  }
+
+  /* line 100, ../sass/_grid-wide.sass */
+  .grid-width-xlarge-1-5 > * {
+    width: 20%;
+  }
+
+  /* line 103, ../sass/_grid-wide.sass */
+  .grid-width-xlarge-1-6 > * {
+    width: 16.666%;
+  }
+
+  /* line 106, ../sass/_grid-wide.sass */
+  .grid-width-xlarge-1-10 > * {
+    width: 10%;
+  }
+}
+/* line 24, ../sass/screen.sass */
+body, .wrapper {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+/* line 31, ../sass/screen.sass */
+.center_box, .content {
+  margin: 0 auto;
+}
+
+/* line 34, ../sass/screen.sass */
+.main_wide, .content {
+  max-width: 960px;
+}
+
+/* line 37, ../sass/screen.sass */
+.btn {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: blue;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  font-weight: bold;
+}
+/* line 47, ../sass/screen.sass */
+.btn:hover {
+  opacity: 0.5;
+  color: yellow;
+}
+
+/* line 51, ../sass/screen.sass */
+.btn__red {
+  color: red;
+  background: red;
+  color: #fff;
+}
+/* line 55, ../sass/screen.sass */
+.btn__red:hover {
+  color: blue;
+}
+
+/* line 58, ../sass/screen.sass */
+header {
+  min-height: 100px;
+}
+
+/* line 61, ../sass/screen.sass */
+.content {
+  background: #fff;
+  font-family: Arial;
+}
+
+/* line 67, ../sass/screen.sass */
+footer {
+  background: #000;
+  color: #fff;
+}
